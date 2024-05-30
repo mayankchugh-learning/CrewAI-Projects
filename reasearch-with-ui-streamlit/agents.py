@@ -24,7 +24,7 @@ class ResearchCrewAgents:
         self.web = WebsiteSearchTool()
         self.txt_tool = TXTSearchTool()
         self.llama2 = ChatOpenAI(model=model,  base_url=anyscale_base_url, api_key=anyscale_api)
-        self.Ollama = Ollama(model="mistral")
+        self.Ollama = Ollama(model="llama2:7b-chat")
 
     def researcher(self):
         # Detailed agent setup for the Researcher
@@ -35,7 +35,7 @@ class ResearchCrewAgents:
             verbose=True,
             allow_delegation=False,
             tools=[self.web],
-            llm=self.llama2
+            llm=self.Ollama
         )
 
     def analyst(self):
@@ -47,7 +47,7 @@ class ResearchCrewAgents:
             tools=[self.serper],
             verbose=True,
             allow_delegation=False,
-            llm=self.llama2
+            llm=self.Ollama
         )
 
     def writer(self):
@@ -59,5 +59,5 @@ class ResearchCrewAgents:
             tools=[self.txt_tool],
             verbose=True,
             allow_delegation=False,
-            llm=self.llama2
+            llm=self.Ollama
         )
