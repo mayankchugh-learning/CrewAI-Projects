@@ -54,11 +54,14 @@ The "Trip Planner From Scratch" project is a Python-based application that allow
    ```
 
 ### Running the Application
-1. Execution
+1. Execution application as backend
    ```bash
    python main.py
    ```
-2. Access the application in your web browser at `http://localhost:5000/`.
+2. Access the application in web browser
+   ```bash
+   streamlit run streamlit_app.py
+   ```
 
 ## Creating Agents
 To build the trip planner application, the project uses a modular approach with different "agents" responsible for specific tasks. The agents work together to create the final trip plan. Here's a cheat sheet for creating the agents:
