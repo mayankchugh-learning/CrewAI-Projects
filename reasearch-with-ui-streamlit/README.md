@@ -50,11 +50,6 @@
    ```bash
    python main.py
    ```
-2. Access the application in your web browser at `http://localhost:5000/`.
-
-
-
-
 
 ```bash
 https://python-poetry.org/docs/#installing-with-the-official-installer

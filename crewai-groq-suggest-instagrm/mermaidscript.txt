@@ -1,0 +1,23 @@
+graph LR
+    subgraph MarketingAnalysisAgents
+        product_competitor_agent[Product Competitor Agent]
+        strategy_planner_agent[Strategy Planner Agent]
+        creative_content_creator_agent[Creative Content Creator Agent]
+        senior_photographer_agent[Senior Photographer Agent]
+        chief_creative_diretor_agent[Chief Creative Director Agent]
+    end
+
+    subgraph MarketingAnalysisTasks
+        product_analysis[Product Analysis]
+        competitor_analysis[Competitor Analysis]
+        campaign_development[Campaign Development]
+        instagram_ad_copy[Instagram Ad Copy]
+        take_photograph_task[Take Photograph Task]
+        review_photo[Review Photo]
+    end
+
+    product_competitor_agent --> product_analysis
+    strategy_planner_agent --> campaign_development
+    creative_content_creator_agent --> instagram_ad_copy
+    senior_photographer_agent --> take_photograph_task
+    chief_creative_diretor_agent --> review_photo
